@@ -1,0 +1,29 @@
+{
+  "name": "real_blog",
+  "version": "1.0.0",
+  "description": "a self and real blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekingincatsle/Real_Blog.git"
+  },
+  "author": "tiendat",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thekingincatsle/Real_Blog/issues"
+  },
+  "homepage": "https://github.com/thekingincatsle/Real_Blog#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "node-sass": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
