@@ -1,0 +1,49 @@
+@import "variables";
+h1 {
+  color: $red-color;
+}
+
+.nav-effect {
+  border-radius: 10px;
+}
+
+.nav-effect:hover {
+  background-color: gray;
+}
+#thumnail {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+  height: auto;
+}
+
+@media only screen and (max-width: 1023px) {
+  .table-of-content,
+  .other-blog {
+    display: none;
+  }
+}
+.table-of-content{
+  .heading1{
+    font-size: 1.7rem;
+    margin-top: 1.5rem;
+  }
+  .heading2{
+    font-size: 1.5rem;
+    // padding-left: 1.5rem;
+  }
+  .heading3{
+    font-size: 1rem;  
+    // padding-left: 3rem;
+  }
+  .heading1,.heading2,.heading3{
+    a{
+      text-decoration: none;
+      color: gray;
+      opacity: 0.7;
+    }
+    a:hover{
+      opacity: 1;
+    }
+  }
+}
