@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const { engine: handlebars } = require("express-handlebars");
 
 const app = express();
-const port = process.env.POST || 3000;
+const port = process.env.PORT || 3000;
 const route = require("./routes");
 // const db = require("./config/db");
 const mongoose = require('mongoose');
