@@ -2,7 +2,12 @@
 h1 {
   color: $red-color;
 }
-
+body{
+  overflow: hidden;
+}
+.app {
+  width: 100vw;
+}
 .nav-effect {
   border-radius: 10px;
 }

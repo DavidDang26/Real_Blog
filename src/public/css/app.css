@@ -1,6 +1,12 @@
 h1 {
   color: red; }
 
+body {
+  overflow: hidden; }
+
+.app {
+  width: 100vw; }
+
 .nav-effect {
   border-radius: 10px; }
 
