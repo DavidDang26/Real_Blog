@@ -26,7 +26,9 @@ body {
 @media only screen and (max-width: 992px) {
   .table-of-content,
   .other-blog {
-    display: none; } }
+    display: none; }
+  body {
+    margin: 0; } }
 
 .blog-body img {
   border-radius: 0.5rem; }
