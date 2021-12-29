@@ -1,11 +1,15 @@
-h1 {
-  color: red; }
+* {
+  margin: 0;
+  padding: 0; }
 
 body {
-  overflow: hidden; }
+  margin: 1.5rem 3rem; }
 
-.app {
-  width: 100vw; }
+.blog-content img {
+  width: 100%; }
+
+.width-inherit {
+  width: inherit; }
 
 .nav-effect {
   border-radius: 10px; }
@@ -19,10 +23,16 @@ body {
   margin: auto;
   height: auto; }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 992px) {
   .table-of-content,
   .other-blog {
     display: none; } }
+
+.blog-body img {
+  border-radius: 0.5rem; }
+
+.blog-body .blog-content h1 {
+  color: red; }
 
 .table-of-content .heading1 {
   font-size: 1.7rem;
@@ -34,10 +44,52 @@ body {
 .table-of-content .heading3 {
   font-size: 1rem; }
 
-.table-of-content .heading1 a, .table-of-content .heading2 a, .table-of-content .heading3 a {
+.table-of-content .heading1 a,
+.table-of-content .heading2 a,
+.table-of-content .heading3 a {
   text-decoration: none;
   color: gray;
   opacity: 0.7; }
 
-.table-of-content .heading1 a:hover, .table-of-content .heading2 a:hover, .table-of-content .heading3 a:hover {
+.table-of-content .heading1 a:hover,
+.table-of-content .heading2 a:hover,
+.table-of-content .heading3 a:hover {
   opacity: 1; }
+
+.boradius-05 {
+  border-radius: 0.5rem !important; }
+
+.boradius-1 {
+  border-radius: 1rem !important; }
+
+.boradius-2 {
+  border-radius: 2rem !important; }
+
+.boradius-3 {
+  border-radius: 3rem !important; }
+
+.blog_list .blog-card {
+  cursor: pointer;
+  height: 20rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.274); }
+  .blog_list .blog-card .blog-thumnail {
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem 1rem 0 0; }
+    .blog_list .blog-card .blog-thumnail img {
+      position: absolute;
+      width: 100%;
+      top: -25%;
+      transition: all 0.8s; }
+    .blog_list .blog-card .blog-thumnail img:hover {
+      transform: scale(1.1); }
+  .blog_list .blog-card .blog-title {
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    margin-left: 1.3rem; }
+  .blog_list .blog-card .blog-date {
+    text-align: right;
+    margin-right: 1rem;
+    font-size: 1rem; }

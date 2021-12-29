@@ -1,1 +1,30 @@
-<a href="blog/dat">test</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+<div class="blog_list row">
+  {{#each blogs}}
+    <div class="col-lg-4 col-sm-6 col-xs-12">
+      <div class="blog-card mt-3 boradius-1" onclick="location.href='/blog/{{this.name}}'" id="{{this.name}}">
+        <div class="blog-thumnail">
+          <img src="{{this.image}}" alt="" class="">
+        </div>
+        <div class="blog-title">
+          {{this.name}}
+        </div>
+        <div class="blog-date">
+          {{this.createAt}}
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<script src="/js/blogs.js"></script>
+</body>
+</html>

@@ -1,12 +1,23 @@
 @import "variables";
-h1 {
-  color: $red-color;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-  overflow: hidden;
+body {
+  margin: 1.5rem 3rem;
 }
-.app {
-  width: 100vw;
+
+.blog-content {
+  img {
+    width: 100%;
+  }
+}
+
+// body {
+//   position: fixed;
+// }
+.width-inherit {
+  width: inherit;
 }
 .nav-effect {
   border-radius: 10px;
@@ -22,33 +33,96 @@ body{
   height: auto;
 }
 
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 992px) {
   .table-of-content,
   .other-blog {
     display: none;
   }
 }
-.table-of-content{
-  .heading1{
+.blog-body {
+  img {
+    border-radius: 0.5rem;
+  }
+  .blog-content {
+    h1 {
+      color: $red-color;
+    }
+  }
+}
+.table-of-content {
+  .heading1 {
     font-size: 1.7rem;
     margin-top: 1.5rem;
   }
-  .heading2{
+  .heading2 {
     font-size: 1.5rem;
     // padding-left: 1.5rem;
   }
-  .heading3{
-    font-size: 1rem;  
+  .heading3 {
+    font-size: 1rem;
     // padding-left: 3rem;
   }
-  .heading1,.heading2,.heading3{
-    a{
+  .heading1,
+  .heading2,
+  .heading3 {
+    a {
       text-decoration: none;
       color: gray;
       opacity: 0.7;
     }
-    a:hover{
+    a:hover {
       opacity: 1;
     }
   }
+}
+//slider
+//round the app
+.boradius-05 {
+  border-radius: 0.5rem !important;
+}
+.boradius-1 {
+  border-radius: 1rem !important;
+}
+
+.boradius-2 {
+  border-radius: 2rem !important;
+}
+
+.boradius-3 {
+  border-radius: 3rem !important;
+}
+.blog_list {
+  .blog-card{
+    // background-color: rgb(243, 240, 240);
+    cursor: pointer;
+    height: 20rem;
+  
+  .blog-thumnail{
+    width: 100%;
+    height: 65%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
+    img{
+      position: absolute;
+      width: 100%;
+      top: -25%;
+      transition: all 0.8s;
+    }
+    img:hover{
+      transform: scale(1.1);
+    }
+  }
+  .blog-title{
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    margin-left: 1.3rem;
+  }
+  .blog-date{
+    text-align: right;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.274);
+}
 }
