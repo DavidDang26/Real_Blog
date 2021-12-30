@@ -11,7 +11,14 @@
   <div class="col-lg-3 ">
     {{> toc}}
   </div>
-  <div class=" col-lg-6 col-sm-12 px-5 fs-5 blog-body">
+  <div class=" col-lg-9 col-sm-12 px-5 fs-5 blog-body ">
+    <div class="blog-body--tag">
+      {{#each tags}}
+        <div class="{{this}} tag-item" onclick="location.href='/blog/tags/{{this}}'">{{this}}</div>
+      {{/each}}
+    </div>
+    <div class="blog-body--title">{{blog.name}}</div>
+    <div class="blog-body--time">{{blog.createAt}}</div>
     <div class=" mt-5 mb-5 blog-image">
       <img src="{{blog.image}}" alt="{{blog.name}}" id="thumnail" />
     </div>
@@ -20,11 +27,11 @@
     </div>
   
   </div>
-  <div class=" col-lg-3 ">
-    <div class="other-blogs sticky-top pt-5">
+  {{!-- <div class=" col-lg-3 ">
+    <div class="other-blog sticky-top pt-5">
       others
     </div>
-  </div>
+  </div> --}}
 </div>
 <script src="/js/blog.js"></script>
 </body>

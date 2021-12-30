@@ -16,10 +16,18 @@ class BlogController{
             if (!err) {
               blogs = multiMongooseToObject(blogs);
               const currentBlog = blogs.find(blog => blog.name === req.params.name);
-              res.render("blog", {blog: currentBlog});
+              const tags = currentBlog.tags.split(',');
+              res.render("blog", {blog: currentBlog, tags: tags});
             } else res.status(400).json({ error: "Error!" });
           });
         
+    }
+    showTag(req,res){
+      Blog.find({}).then(blogs => {
+        blogs = multiMongooseToObject(blogs);
+        blogs = blogs.filter(blog => blog.tags.includes(req.params.tag));
+        res.render("blogs", {blogs});
+      }).catch(err => res.status(400).json({ error: "Error!" } ));
     }
 }
 module.exports = new BlogController();

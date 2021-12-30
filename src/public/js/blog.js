@@ -23,3 +23,20 @@ headings.forEach(heading => {
     toc.appendChild(tableElement);
 })
 
+
+const dates = document.querySelector('.blog-body--time');
+const formatDate = date => {
+    const datee = new Date(date.textContent);
+    const options = {
+    year: 'numeric', month: 'numeric', day: 'numeric',
+    hour: 'numeric', minute: 'numeric', second: 'numeric',
+    hour12: false,
+    // timeZone: 'America/Los_Angeles'
+  }
+    const newDate = new Intl.DateTimeFormat('en-GB', options).format(datee)
+    date.textContent = `Published on: ${newDate}`;
+};
+formatDate(dates);
+
+
+
