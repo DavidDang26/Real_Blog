@@ -39,12 +39,12 @@ body {
     border: 1px solid white;
     border-radius: 10px;
     padding: 0 1rem;
-    transition: all .2s; }
+    transition: all 0.2s; }
   .blog-body--tag .tag-item:hover {
     opacity: 1;
     border: 1px black solid; }
   .blog-body--tag .JavaScript {
-    color: #FEBC58; }
+    color: #febc58; }
   .blog-body--tag .Web {
     color: #00b7ff; }
 
@@ -129,3 +129,16 @@ body {
     text-align: right;
     margin-right: 1rem;
     font-size: 1rem; }
+
+.profile-picture {
+  display: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  overflow: hidden;
+  border-radius: 50%;
+  cursor: pointer; }
+  .profile-picture img {
+    width: 100%; }
+
+#logout-dropdown {
+  display: none; }

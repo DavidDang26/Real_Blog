@@ -29,6 +29,8 @@ app.use(express.json()); //gui du lieu tu code JavaScript
 app.engine(".hbs", handlebars({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "resources", "views"));
+//facebook
+
 
 //Router init
 route(app);

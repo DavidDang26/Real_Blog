@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark width-inherit boradius-05 mb-3">
+<nav
+  class="navbar navbar-expand-lg bg-dark navbar-dark width-inherit boradius-05 mb-3"
+>
   <div class="container">
     <a class="navbar-brand" href="/">Home</a>
     <button
@@ -19,6 +21,64 @@
         </li>
         <li class="nav-item ms-3">
           <a href="/blog" class="nav-link nav-effect">Blog</a>
+        </li>
+        <li class="nav-item ms-3" id="login-button-ctn">
+          <button
+            type="button"
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#LoginModal"
+            id="login-button"
+          >
+            Sign in
+          </button>
+          <div
+            class="modal fade"
+            id="LoginModal"
+            tabindex="-1"
+            aria-labelledby="LoginModal"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="LoginModal">Sign in</h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div
+                    scope="public_profile,email"
+                    onlogin="checkLoginState();"
+                    class="fb-login-button"
+                    data-width=""
+                    data-size="large"
+                    data-button-type="continue_with"
+                    data-layout="default"
+                    data-auto-logout-link="false"
+                    data-use-continue-as="false"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        
+        <li class="nav-item ms-3">
+          <div class="profile-picture"><img src="https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=1542136902839125&height=50&width=50&ext=1643623037&hash=AeQn_DDETqk3mWEUmko" alt=""></div>
+        </li>
+        <li class="nav-item dropdown " id="logout-dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" >
+            <li><a class="dropdown-item" href="#" id="logout-button">Log out</a></li>
+              
+          </ul>
         </li>
       </ul>
     </div>
