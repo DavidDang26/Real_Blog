@@ -24,7 +24,7 @@ class ScriptController {
                     })
                 }
                 if(data){
-                   alert('successfully');
+                   console.log('succesfully');
                 }
             })
         })

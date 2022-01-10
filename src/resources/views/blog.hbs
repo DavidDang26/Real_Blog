@@ -25,6 +25,7 @@
     <div class="blog-content">
     {{{blog.html}}}
     </div>
+    
   
   </div>
   {{!-- <div class=" col-lg-3 ">
@@ -32,6 +33,42 @@
       others
     </div>
   </div> --}}
+</div>
+<div class="row">
+    <div class="mx-auto col-9" id="comment-component">
+      <div class="comment-title">Comments</div>
+      <div class="comment-display"> 
+        {{#each blog.comments}}
+        <div class="single-comment">
+          <div class="display-name">
+               {{this.displayName}}
+          </div>
+          <div class="comment-time">{{this.createAt}}</div>
+          <div class="comment-content">
+            {{this.commentContent}}
+          </div>
+          
+          
+        </div>
+      {{/each}}
+      </div>
+      <div class="comment-create">
+        <form method="POST">
+          <div class="mb-3">
+            <label for="displayNameInput" class="form-label">Display Name</label>
+            <input type="text" class="form-control" id="displayNameInput" name="displayName" >
+          
+          </div>
+          <div class="mb-3">
+            <label for="yourCommentInput" class="form-label">Your Comment</label>
+            <input type="text" class="form-control" id="yourCommentInput" name="commentContent">
+              <div id="commentHelp" class="form-text">Use Window + . for icons ❤️</div>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </form> 
+      </div>
+      
+    </div>
 </div>
 <script src="/js/blog.js"></script>
 </body>

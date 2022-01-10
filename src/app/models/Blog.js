@@ -6,8 +6,9 @@ const Blog = new Schema({
   name: {type: String, maxLength: 255},
   description: {type: String,maxLength: 600},
   image: { type: String,maxLength: 255},
-  createAt: {type: Date, default: Date.now},
-  updatedAt: {type: Date, default: Date.now},
+  comments: {type: [Object],default: []},
+  createAt: {type: Date, default: new Date()},
+  updatedAt: {type: Date, default: new Date()},
 });
 
 module.exports = mongoose.model('Blog', Blog);

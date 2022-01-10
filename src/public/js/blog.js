@@ -37,6 +37,22 @@ const formatDate = date => {
     date.textContent = `Published on: ${newDate}`;
 };
 formatDate(dates);
+//generate the comment box;
+const commentBox = document.querySelector('.blog-body--comment');
+function generateComment(){
+  const data = JSON.parse(localStorage.getItem("user")); 
+  if(!data) {
+    const noLoginEl = document.createElement("DIV");
+    noLoginEl.textContent = 'please sign in to comment on this post!';
+    commentBox.appendChild(noLoginEl);
+  }else{
+    const LoginEl = document.createElement("INPUT");
+    LoginEl.type = 'text';
+    commentBox.appendChild(LoginEl);
+  }
+
+}
+generateComment();
 
 
 

@@ -142,3 +142,87 @@ body {
 
 #logout-dropdown {
   display: none; }
+
+#comment-component .comment-title {
+  font-size: 3rem;
+  margin-bottom: 2rem; }
+
+#comment-component .comment-display .single-comment {
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  height: 8rem;
+  border: black solid 1px;
+  box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.26); }
+  #comment-component .comment-display .single-comment .display-name {
+    padding-top: 0.5rem;
+    padding-left: 2rem;
+    font-weight: 700; }
+  #comment-component .comment-display .single-comment .comment-time {
+    padding-left: 2rem;
+    font-size: 0.8rem; }
+  #comment-component .comment-display .single-comment .comment-content {
+    word-wrap: break-word;
+    color: red;
+    padding-top: 0.3rem;
+    padding-left: 2rem;
+    width: 100%; }
+
+.footer-icon {
+  font-size: 1.5rem; }
+
+#about-me {
+  background-color: blanchedalmond;
+  z-index: -3; }
+  #about-me .port-picture {
+    width: 40%;
+    position: relative;
+    z-index: 3; }
+  #about-me .port-pictureContainer {
+    position: relative; }
+    #about-me .port-pictureContainer .picture-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      #about-me .port-pictureContainer .picture-content .right-greeting, #about-me .port-pictureContainer .picture-content .left-greeting {
+        font-size: 4vw;
+        padding-bottom: 15rem;
+        min-width: 30%;
+        text-align: center; }
+  #about-me .port-pictureContainer::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 57%; }
+  #about-me .favorite-things .favorite-title {
+    padding-left: 3.5rem;
+    font-size: 4vw; }
+  #about-me .favorite-things .favorite-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around; }
+    #about-me .favorite-things .favorite-container .favorite-item {
+      width: 20%; }
+      #about-me .favorite-things .favorite-container .favorite-item img {
+        width: 100%; }
+  #about-me .purpose-title, #about-me .thank-title {
+    padding-left: 3.5rem;
+    font-size: 4vw;
+    margin-top: 3rem; }
+  #about-me .thank-title {
+    color: red; }
+  #about-me .purpose-content, #about-me .thank-content {
+    margin-top: 3rem;
+    padding-left: 3.5rem;
+    font-size: 2vw; }
+  #about-me .thank-content {
+    padding-left: 65%; }
+  #about-me .arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    #about-me .arrow img {
+      width: 5rem;
+      margin-right: 4.5rem; }
