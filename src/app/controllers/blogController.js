@@ -38,7 +38,7 @@ class BlogController{
           year: 'numeric', month: 'numeric', day: 'numeric',
           hour: 'numeric', minute: 'numeric', second: 'numeric',
           hour12: false,
-          // timeZone: 'America/Los_Angeles'
+          timeZone: 'Asia/Ho_Chi_Minh'
         }
           return new Intl.DateTimeFormat('en-GB', options).format(date)
           

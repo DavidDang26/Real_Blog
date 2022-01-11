@@ -150,13 +150,17 @@ body {
 #comment-component .comment-display .single-comment {
   margin-bottom: 2rem;
   border-radius: 10px;
-  height: 8rem;
+  height: auto;
   border: black solid 1px;
-  box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.26); }
+  box-shadow: 0.5rem 0.5rem 10px rgba(0, 0, 0, 0.26);
+  padding-bottom: 2rem; }
   #comment-component .comment-display .single-comment .display-name {
+    overflow: hidden;
+    word-wrap: break-word;
     padding-top: 0.5rem;
     padding-left: 2rem;
-    font-weight: 700; }
+    font-weight: 700;
+    width: 100%; }
   #comment-component .comment-display .single-comment .comment-time {
     padding-left: 2rem;
     font-size: 0.8rem; }
@@ -183,7 +187,8 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center; }
-      #about-me .port-pictureContainer .picture-content .right-greeting, #about-me .port-pictureContainer .picture-content .left-greeting {
+      #about-me .port-pictureContainer .picture-content .right-greeting,
+      #about-me .port-pictureContainer .picture-content .left-greeting {
         font-size: 4vw;
         padding-bottom: 15rem;
         min-width: 30%;
@@ -207,13 +212,15 @@ body {
       width: 20%; }
       #about-me .favorite-things .favorite-container .favorite-item img {
         width: 100%; }
-  #about-me .purpose-title, #about-me .thank-title {
+  #about-me .purpose-title,
+  #about-me .thank-title {
     padding-left: 3.5rem;
     font-size: 4vw;
     margin-top: 3rem; }
   #about-me .thank-title {
     color: red; }
-  #about-me .purpose-content, #about-me .thank-content {
+  #about-me .purpose-content,
+  #about-me .thank-content {
     margin-top: 3rem;
     padding-left: 3.5rem;
     font-size: 2vw; }
@@ -226,3 +233,8 @@ body {
     #about-me .arrow img {
       width: 5rem;
       margin-right: 4.5rem; }
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
