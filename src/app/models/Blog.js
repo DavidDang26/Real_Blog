@@ -7,6 +7,7 @@ const Blog = new Schema({
   description: {type: String,maxLength: 600},
   image: { type: String,maxLength: 255},
   comments: {type: [Object],default: []},
+  countComments: {type: Number, default: 0},
   createAt: {type: Date, default: new Date()},
   updatedAt: {type: Date, default: new Date()},
 });

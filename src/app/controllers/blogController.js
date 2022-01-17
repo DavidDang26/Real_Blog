@@ -49,8 +49,9 @@ class BlogController{
           createAt: formatDate(new Date())
         }
         blog.comments.push(newComment);
+        // blog.comments = blog.comments.slice(0,7);
+        blog.countComments = blog.comments.length;
         //reset comment
-        // blog.comments = [];
         blog.save((err, blog) => {
           if(err){
             return res.status(400).json({
