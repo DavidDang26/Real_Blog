@@ -17,7 +17,8 @@ class BlogController{
             if (!err) {
               blogs = multiMongooseToObject(blogs);
               const currentBlog = blogs.find(blog => blog.name === req.params.name);
-              const tags = currentBlog.tags.split(',');
+              let tags
+              if(currentBlog.tags.includes(",")) tags = currentBlog.tags.split(','); else tags = [currentBlog.tags]
               res.render("blog", {blog: currentBlog, tags: tags});
             } else res.status(400).json({ error: "Error!" });
           });

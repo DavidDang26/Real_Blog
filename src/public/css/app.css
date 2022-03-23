@@ -49,6 +49,8 @@ body {
     color: #00b7ff; }
   .blog-body--tag .Theory {
     color: black; }
+  .blog-body--tag .Chuyen_linh_tinh {
+    color: brown; }
 
 .blog-body--title {
   font-weight: 700;
@@ -107,6 +109,7 @@ body {
   border-radius: 3rem !important; }
 
 .blog_list .blog-card {
+  position: relative;
   cursor: pointer;
   height: 20rem;
   box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.274); }
@@ -128,8 +131,9 @@ body {
     font-size: 1.7rem;
     margin-left: 1.3rem; }
   .blog_list .blog-card .blog-date {
-    text-align: right;
-    margin-right: 1rem;
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
     font-size: 1rem; }
 
 .profile-picture {
